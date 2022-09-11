@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F2EF;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #035E7B;
+}
+
+.topnavText  {
+
+    /* position: absolute; */
+    left: 5%;
+    margin: 1.5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* line-height: 44px; */
+
+    color: #FFFFFF;
+}
+.cta{
+    text-align: center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 40%; */
+  }
+button{
+    background-color: #035E7B;
+}
