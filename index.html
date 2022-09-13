@@ -38,13 +38,13 @@
 
 
     <script>
-        var imgsrc='';
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             width: 300,
             height: 300
         });
-
+        
         function makeCode() {
+            var imgsrc='';
             var elText = document.getElementById("content");
             if (!elText.value) {
                 alert("Input a text");
@@ -58,6 +58,7 @@
             setTimeout(()=>{
             imgsrc=getImage.childNodes[1].src;
                 //console.log(imgsrc);
+                download(imgsrc);
         },500)
         }
         //makeCode();
@@ -69,7 +70,7 @@
             }
 
         }
-        function download(){
+        function download(imgsrc){
  //   const fileName = source.split('/').pop();
 	var el = document.createElement("a");
 	el.setAttribute("href", imgsrc);
