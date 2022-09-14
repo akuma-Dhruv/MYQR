@@ -44,7 +44,7 @@
         });
         
         function makeCode() {
-            var imgsrc='';
+            // var imgsrc='';
             var elText = document.getElementById("content");
             if (!elText.value) {
                 alert("Input a text");
@@ -56,9 +56,9 @@
             // console.log(qrcode);
             var getImage=document.getElementById("qrcode");
             setTimeout(()=>{
-            imgsrc=getImage.childNodes[1].src;
+            var imgsrc=getImage.childNodes[1].src;
                 //console.log(imgsrc);
-                // alert("downloading Image"+imgsrc);
+                alert("downloading Image"+imgsrc);
                 download(imgsrc);
             },2000)
         }
