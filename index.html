@@ -53,16 +53,16 @@
             }
 
             qrcode.makeCode(elText.value);
-            // console.log(qrcode);
+            console.log(qrcode);
             var getImage=document.getElementById("qrcode");
             setTimeout(()=>{
             var imgsrc=getImage.childNodes[1].src;
-                //console.log(imgsrc);
+                console.log(imgsrc);
                 alert("downloading Image"+imgsrc);
-                if(imgsrc=="")
-                {
-                    imgsrc=initilizeImage();
-                }
+                // if(imgsrc=="")
+                // {
+                //     imgsrc=initilizeImage();
+                // }
                 download(imgsrc);
             },2000)
         }
