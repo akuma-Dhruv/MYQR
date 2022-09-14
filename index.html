@@ -26,12 +26,12 @@
             <input type="text" name="content" id="content" placeholder="start Typing..." onkeypress="keyPress(event)">
         </div>
         <br>
-        <a href="/" id="qrcode" ></a>
-        <!-- <div id="qrcode" download></div> -->
+        <!-- <a href="/" id="qrcode" ></a> -->
+        <div id="qrcode"></div>
 
         <br>
         <div class="generatebutton">
-            <button type="submit" onclick="download()">Download</button>
+            <!-- <button type="submit" onclick="download()">Download</button> -->
         </div>
     </div>
 
@@ -59,7 +59,7 @@
             imgsrc=getImage.childNodes[1].src;
                 //console.log(imgsrc);
                 download(imgsrc);
-        },500)
+        },2000)
         }
         //makeCode();
         function keyPress(event) {
