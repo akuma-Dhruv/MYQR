@@ -58,8 +58,9 @@
             setTimeout(()=>{
             imgsrc=getImage.childNodes[1].src;
                 //console.log(imgsrc);
+                // alert("downloading Image"+imgsrc);
                 download(imgsrc);
-        },2000)
+            },2000)
         }
         //makeCode();
         function keyPress(event) {
@@ -68,10 +69,11 @@
             if (event.keyCode == 13) {
                 makeCode();
             }
-
+            
         }
         function download(imgsrc){
- //   const fileName = source.split('/').pop();
+            //   const fileName = source.split('/').pop();
+    alert("downloading Image"+imgsrc);
 	var el = document.createElement("a");
 	el.setAttribute("href", imgsrc);
 	el.setAttribute("download", "Qr");
