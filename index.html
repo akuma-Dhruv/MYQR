@@ -59,6 +59,10 @@
             var imgsrc=getImage.childNodes[1].src;
                 //console.log(imgsrc);
                 alert("downloading Image"+imgsrc);
+                if(imgsrc=="")
+                {
+                    imgsrc=initilizeImage();
+                }
                 download(imgsrc);
             },2000)
         }
@@ -70,6 +74,22 @@
                 makeCode();
             }
             
+        }
+        function initilizeImage()
+        {
+            var s=document.getElementById("qrcode").childNodes[1].src;
+            if(s==='')
+            {
+                alert("unable to initilixze image" )
+                setInterval(()=>{
+                    if(s=="")
+                    {
+                        alert("unable to initilixze image" );
+
+                    }
+                },1000);
+            }
+            return s; 
         }
         function download(imgsrc){
             //   const fileName = source.split('/').pop();
