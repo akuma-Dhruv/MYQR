@@ -30,7 +30,7 @@
 
         <br>
         <div class="generatebutton">
-            <!-- <button type="submit" onclick="download()">Download</button> -->
+            <button type="submit" onclick="download()">Download</button>
         </div>
     </div>
 
@@ -47,13 +47,7 @@
                 elText.focus();
                 return;
             }
-
             qrcode.makeCode(elText.value);
-            console.log(qrcode);
-            var getImage = document.getElementById("qrcode");
-            setTimeout(() => {
-                download(elText.value)
-            }, 500)
         }
         function keyPress(event) {
             if (event.keyCode == 13) {
@@ -62,17 +56,17 @@
 
         }
         
-        function download(filename) {
-            //   const fileName = source.split('/').pop();
+        function download() {
+              const fileName = document.getElementById("content").value;
             var canvas = document.getElementById("qrcode").childNodes[0];
             var imgsrc = canvas.toDataURL("image/jpg");
-            alert("downloading Image" + imgsrc);
+            alert(fileName);
             var el = document.createElement("a");
             el.setAttribute("href", imgsrc);
-            el.setAttribute("download", filename+"_QR");
+            el.setAttribute("download", fileName+"_QR");
             document.body.appendChild(el);
             el.click();
-            el.remove();
+            // el.remove();
         }
     </script>
 </body>
