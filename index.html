@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="shortcut icon" href="favicon.PNG" type="image/x-icon">
     <script type="text/javascript" src="qrcode.js"></script>
-    <!-- <script type="text/javascript" src="script.js"></script> -->
 
     <title>MY QR</title>
 </head>
@@ -23,7 +22,8 @@
         </div>
         <hr>
         <div class="textbox">
-            <input type="text" name="content" id="content" placeholder="start Typing..." onkeypress="keyPress(event)">
+            <input type="text" name="content" id="content" placeholder="start Typing... and hit enter"
+                onkeypress="keyPress(event)">
         </div>
         <br>
         <div id="qrcode"></div>
@@ -55,18 +55,22 @@
             }
 
         }
-        
+
         function download() {
-              const fileName = document.getElementById("content").value;
+            const fileName = document.getElementById("content").value;
+            if(!fileName)
+            {
+                alert("enter value first")
+                return;
+            }
             var canvas = document.getElementById("qrcode").childNodes[0];
             var imgsrc = canvas.toDataURL("image/jpg");
-            alert(fileName);
             var el = document.createElement("a");
             el.setAttribute("href", imgsrc);
-            el.setAttribute("download", fileName+"_QR");
+            el.setAttribute("download", fileName + "_QR");
             document.body.appendChild(el);
             el.click();
-            // el.remove();
+            el.remove();
         }
     </script>
 </body>

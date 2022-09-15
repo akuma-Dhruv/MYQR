@@ -11,15 +11,12 @@ body {
 
 .topnavText  {
 
-    /* position: absolute; */
     left: 5%;
     margin: 1.5%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
-    /* line-height: 44px; */
-
     color: #FFFFFF;
 }
 .cta{
@@ -32,9 +29,14 @@ img {
     /* width: 40%; */
   }
 button{
-    background-color: #035E7B;
+    color: #ffffff;
+    background-color: #035e7b;
+    font-size: 19px;
+    border: 1px solid #2d63c8;
+    border-radius: 12px;
+    padding: 15px 50px;
+    cursor: pointer
 }
-.fuck
-{
-    display: none;
+button:hover {
+    background-color: #7a89f5;
 }
